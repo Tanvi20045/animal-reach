@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             {user ? (
               <>
-                <span className="font-body text-sm text-ink/70">Hi, {user.name.split(" ")[0]}</span>
+                <span className="font-body text-sm text-ink/70">Hi, {user?.name?.split(" ")[0] || "there"}</span>
                 <button
                   onClick={logout}
                   className="font-body text-sm text-ink/70 hover:text-rust transition-colors"
